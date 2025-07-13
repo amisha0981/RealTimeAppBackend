@@ -1,4 +1,4 @@
-const Note = require('../Model/noteModel');
+const Note = require('../Model/noteModel')
 
 // Create a new note
 exports.createNote = async (req, res) => {
@@ -21,7 +21,7 @@ exports.createNote = async (req, res) => {
 // Get all notes
 exports.getNotes = async (req, res) => {
   try {
-    const notes = await Note.find();
+    const notes = await Note.find().sort({updatedAt : -1});
 
     if (!notes || notes.length === 0) {
       return res.status(404).json({ status: false, message: "No notes found." });

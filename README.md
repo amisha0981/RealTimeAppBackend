@@ -1,1 +1,4 @@
-# RealTimeAppBackend
+PORT=5000
+DB=ENTER YOUR MONGO URL
+BASE_URL=http://localhost:5000    // YOUR BACKEND URL
+FRONTEND_URL=http://localhost:5173   // YOUR FRONTEND URL
